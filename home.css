@@ -1,0 +1,347 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.home{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+.heading {
+    font-size: 42px;
+    text-align: center;
+    color: rgb(220, 120, 220);
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.line {
+    color: #555;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-top: 25px;
+    color: #333;
+    font-weight: 600;
+}
+
+section ul {
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+section ul li {
+    margin-top: 10px;
+}
+
+section p {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+button{
+    border: none;
+    background-color: #99a3da;
+    border-bottom: 5px solid #6e77ad;
+    height: 50px;
+    width: 180px;
+    border-radius: 5px;
+    font-family: 'Arial';
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;            
+}
+button:hover{
+    cursor: pointer;
+    color: #6e77ad;
+    border: none;
+    margin-top: 20px;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    background: linear-gradient(45deg, #6e77ad, #99a3da);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-top-color: #3498db;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px;
+    }
+    
+    .navbar a {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    section h2 {
+        font-size: 24px;
+    }
+    
+    section ul {
+        font-size: 18px;
+    }
+    
+    button {
+        width: 150px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+
+.custom-bg {
+    background-color: #f8f9fa;
+    background: rgba(255, 255, 255, 0.01);
+}
+
+h1 {
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: 2.5rem; 
+    margin-bottom: 20px;
+    color: #2C3E50; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.child2quiz {
+    display: flex;
+    justify-content: space-around;
+    gap: 70px;
+}
+
+.child-classquiz {
+    flex: 1; 
+    margin: 10px; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+    background-color: white; 
+    overflow: hidden; 
+}
+
+.child-classquiz:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.carousel-inner img {
+    width: 100%; 
+    height: auto; 
+    max-height: 500px; 
+}
+
+.carousel-caption {
+    font-size: 1em;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+    .carousel-caption h5 {
+        font-size: 1.2em; /* Adjusts the font size of the caption header on smaller screens */
+    }
+    .carousel-caption p {
+        font-size: 0.9em; /* Adjusts the font size of the caption text */
+    }
+    .carousel-inner img {
+        max-height: 300px; /* Reduces image height for mobile screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .child2quiz {
+        flex-direction: column; 
+    }
+    .child-classquiz {
+        margin: 10px 0;
+    }
+}
+
+body.dark-mode {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+button.dark-mode {
+    background-color: #34495e;
+    border-bottom: 5px solid #2c3e50;
+    color: #ecf0f1;
+}
+
+/* Testimonials Section Styles */
+.contain {
+    background-color: #99a3da;
+    width: 60%;
+    margin: 30px auto; /* Centered on the page */
+    border: 2px solid #99a3da;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    padding: 20px; /* Inner spacing */
+}
+
+/* Testimonials Heading */
+#testimonials h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    color: #2c3e50; /* Darker contrasting color */
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slight text shadow for focus */
+}
+
+/* .carousel-inner {
+    padding: 20px 30px;
+} */
+
+blockquote {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #34495e; /* Muted but clear color for readability */
+    line-height: 1.6;
+    position: relative;
+    margin: 20px 0;
+}
+
+blockquote footer {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #7f8c8d; /* Softer font color for footer text */
+    font-style: italic;
+}
+
+blockquote footer cite {
+    font-weight: 600;
+    color: #2c3e50; /* Bold and darker for emphasis */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contain {
+        width: 90%;
+    }
+
+    #testimonials h2 {
+        font-size: 24px;
+    }
+
+    blockquote {
+        font-size: 16px;
+    }
+}
+
+.contain2{
+    background-color: rgba(248, 249, 252, 0.05);
+    width: 90%;
+    margin: 30px auto;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+    /* border-radius: 5px; */
+}
+
+.card1 {
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card1 img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover; 
+    display: block; 
+    margin: auto;
+}
+
+.card1 h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card1 p {
+    font-size: 16px;
+    color: #666;
+}
+
+.card1 a {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.card1 a:hover {
+    text-decoration: underline;
+}

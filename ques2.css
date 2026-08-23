@@ -1,0 +1,144 @@
+#container{
+    height: 340px;
+    width: 500px;
+    border: 1px solid black;
+    margin: auto;
+    transform: translate(0%, 35%);
+    background-color: rgba(240, 240, 240, 0.3);
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 10%);
+}
+.box1{
+    height: 35px;
+    padding: 5px;
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    margin: 5px;
+}
+.box1>div{
+    border-radius: 5px;
+    background-color: #f8f1f8;
+    padding: 7px;
+    margin-left: 15px;
+    color: black;
+}
+
+.timer {
+    background-color: black;
+    color: white;
+    padding: 2.5px;
+    border-radius: 3px;
+}
+/* Timer countdown animation (1 minute = 60s) */
+@keyframes countdown {
+    0% {
+        content: "01:00";
+    }
+    16.66% {
+        content: "00:50";
+    }
+    33.33% {
+        content: "00:40";
+    }
+    50% {
+        content: "00:30";
+    }
+    66.66% {
+        content: "00:20";
+    }
+    83.33% {
+        content: "00:10";
+    }
+    100% {
+        content: "00:00";
+    }
+}
+
+.timer::before {
+    content: "01:00";
+    animation: countdown 60s steps(6) forwards;
+}
+.child1{
+    height: 35px;
+    padding: 5px;
+    gap: 50px;
+    align-items: center;
+    margin: 5px;
+}
+.child2{
+    border: 1px solid rgb(161, 199, 252);
+    height: 35px;
+    padding: 5px;
+    margin: 10px;
+    margin-left: 50px;
+    align-content: center;
+    border-radius: 5px;
+    width: 300px;
+    background-color: rgb(220, 234, 254);
+    padding-left: 10px;
+}
+.box3{
+    height: 15px;
+    padding: 5px;
+    display: flex;
+    gap: 5px;
+    align-content: center;
+    margin: 5px;
+}
+.child2:hover{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.button{
+    text-decoration: none;
+        border: none;
+        background-color: #f4b9ff;
+        border-bottom: 5px solid #da9ee5;
+        height: 25px;
+        width: 81px;
+        border-radius: 5px;
+        font-family: 'Arial';
+        color: #b722d1;
+        font-size: 15px; 
+        align-content: center;           
+        padding: 5px;
+        padding-top: 3px;
+        text-align: center;
+    }
+
+    .button:hover{
+        cursor: pointer;
+        border: 0px;
+        margin-top: 5px;
+        box-shadow: 0 2px 10px #f4b9ff;
+        padding-top: -3px;
+    }
+
+
+/* Radio buttons hidden */
+input[type="radio"] {
+    display: none;
+}
+
+/* Default answer styling */
+.answer .child2 {
+    cursor: pointer;
+}
+
+/* When an answer is selected, the correct one stays green */
+input[type="radio"]:checked + .green {
+    background-color: #d4edda; /* light green */
+    color: green;
+    border-color: green;
+}
+
+/* When an answer is selected, the wrong ones stay red */
+input[type="radio"]:checked + .red {
+    background-color: #f8d7da; /* light red */
+    color: red;
+    border-color: red;
+}
