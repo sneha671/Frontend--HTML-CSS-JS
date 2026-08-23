@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizlet | Login</title>
+    <link rel="shortcut icon" href="./IMAGES/Favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/common.css">
+    <link rel="stylesheet" href="CSS/login.css">
+</head>
+<body >
+    <main class="main">
+        <header class="header">
+            <a href="home.html" class="logo">Quizlet</a>
+        </header>
+    </main>
+    <div class="container">
+        <div class="form-wrapper">
+            <h1>Login</h1>
+            <hr>
+            <form action="home.html" method="post">
+                <div class="input-group">
+                    <label for="email">Username</label>
+                    <input type="email" id="email" name="email" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="forgot-password">
+                    <a href="forgot_pass.html">Forgot Password?</a>
+                </div>
+                <button type="submit"><a href="home.html" class="submit-button">Login</a></button>
+                <div class="signup-link">
+                    Haven't signed up yet? <a href="index.html">Signup</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quizlet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./IMAGES/Favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/ques2.css">
+    <link rel="stylesheet" href="CSS/common.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script>
+        var correctAnswers = {
+            ques1: "B",
+            ques2: "B",
+            ques4: "D",
+            ques3: "C",
+            ques5: "B"
+        };
+
+        function showQuestion(questionId) {
+            var questions = document.querySelectorAll(".question");
+            questions.forEach(q => q.style.display = "none");
+            document.getElementById(questionId).style.display = "block";
+        }
+
+        function checkAnswer(questionId, selectedOption) {
+            var answers = document.querySelectorAll(`#${questionId} .answer`);
+            answers.forEach(answer => answer.classList.remove("correct", "incorrect"));
+
+            if (selectedOption.value === correctAnswers[questionId]) {
+                selectedOption.parentElement.classList.add("correct");
+            } else {
+                selectedOption.parentElement.classList.add("incorrect");
+            }
+        }
+
+        function submitQuiz() {
+            alert("Submitting your quiz!");
+            window.location.href = "./submit.html";
+        }
+    </script>
+    <style>
+        .answer.correct .child2 {
+            background-color: #d4edda;
+        }
+        .answer.incorrect .child2 {
+            background-color: #f8d7da;
+        }
+        
+    </style>
+</head>
+<body onload="showQuestion('ques1')">
+    <main class="main">
+        <header class="header">
+            <a href="./home.html" class="logo">Python Quizlet</a>
+            <nav class="navbar">
+                <a href="home.html">Home</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="leaderboard.html">Leaderboard</a>
+                <a href="about_us.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="index.html"><span class="material-symbols-outlined circle">account_circle</span></a>
+            </nav>
+        </header>
+    </main>
+
+    <div id="container">
+        <!-- Question 1 -->
+        <div class="question" id="ques1">
+            <div class="box1">
+                <h3>Python Quizlet:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                <div>
+                    <p>Time Left - <span class="timer" id="timer"></span></p>
+                </div>
+            </div>
+            <hr>
+            <div class="box2">
+                <div class="child1">
+                    <h2>1. Which is true? </h2>
+                </div>
+                <label class="answer"><input type="radio" name="q1" value="A" onclick="checkAnswer('ques1', this)"> <div class="child2 red">A. Sets allow duplicate elements. </div></label>
+                <label class="answer"><input type="radio" name="q1" value="B" onclick="checkAnswer('ques1', this)"> <div class="child2 green">B. Sets are mutable.</class></div></label>
+                <label class="answer"><input type="radio" name="q1" value="C" onclick="checkAnswer('ques1', this)"> <div class="child2 red">C. Sets are Indexed. </class></div></label>
+                <label class="answer"><input type="radio" name="q1" value="D" onclick="checkAnswer('ques1', this)"> <div class="child2 red">D. None</div></label>
+                <hr>
+                <div class="box3">
+                    <h3>1 of 5 Questions</h3>
+                    <button class="button" onclick="showQuestion('ques2')">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question" id="ques2" style="display: none;">
+            <div class="box1">
+                <h3>Python Quizlet:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                <div>
+                    <p>Time Left - <span class="timer" id="timer"></span></p>
+                </div>
+            </div>
+            <hr>
+            <div class="box2">
+                <div class="child1">
+                    <h2>2. What will range(2, 10, 2) return?</h2>
+                </div>
+                <label class="answer"><input type="radio" name="q2" value="A" onclick="checkAnswer('ques2', this)"> <div class="child2 green">A.range(2, 10, 2)</div></label>
+                <label class="answer"><input type="radio" name="q2" value="B" onclick="checkAnswer('ques2', this)"> <div class="child2 red">B. [2,4,5,7] </div></label>
+                <label class="answer"><input type="radio" name="q2" value="C" onclick="checkAnswer('ques2', this)"> <div class="child2 red">C.[2, 4, 6, 8]</div></label>
+                <label class="answer"><input type="radio" name="q2" value="D" onclick="checkAnswer('ques2', this)"> <div class="child2 red">D. [2, 3, 4, 5, 6, 7, 8, 9]</div></label>
+                <hr>
+                <div class="box3">
+                    <h3>2 of 5 Questions</h3>
+                    <button class="button" onclick="showQuestion('ques1')">Previous</button>
+                    <button class="button" onclick="showQuestion('ques3')">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question" id="ques3" style="display: none;">
+            <div class="box1">
+                <h3>Python Quizlet:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                <div>
+                    <p>Time Left - <span class="timer" id="timer"></span></p>
+                </div>
+            </div>
+            <hr>
+            <div class="box2">
+                <div class="child1">
+                    <h2>3. What is use of _init_ method ?</h2>
+                </div>
+                <label class="answer"><input type="radio" name="q3" value="A" onclick="checkAnswer('ques3', this)"> <div class="child2 red">A. To delete an object </div></label>
+                <label class="answer"><input type="radio" name="q3" value="B" onclick="checkAnswer('ques3', this)"> <div class="child2 red">B. To initialize an object</div></label>
+                <label class="answer"><input type="radio" name="q3" value="C" onclick="checkAnswer('ques3', this)"> <div class="child2 green">C.To create a class</div></label>
+                <label class="answer"><input type="radio" name="q3" value="D" onclick="checkAnswer('ques3', this)"> <div class="child2 red">D. To define a function</div></label>
+                <hr>
+                <div class="box3">
+                    <h3>3 of 5 Questions</h3>
+                    <button class="button" onclick="showQuestion('ques2')">Previous</button>
+                    <button class="button" onclick="showQuestion('ques4')">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question" id="ques4" style="display: none;">
+            <div class="box1">
+                <h3>Python Quizlet:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                <div>
+                    <p>Time Left - <span class="timer" id="timer"></span></p>
+                </div>
+            </div>
+            <hr>
+            <div class="box2">
+                <div class="child1">
+                    <h2>4. Correct way to define a function?</h2>
+                </div>
+                <label class="answer"><input type="radio" name="q4" value="A" onclick="checkAnswer('ques4', this)"> <div class="child2 red">A. function_name</div></label>
+                <label class="answer"><input type="radio" name="q4" value="B" onclick="checkAnswer('ques4', this)"> <div class="child2 red">B. func function_name</div></label>
+                <label class="answer"><input type="radio" name="q4" value="C" onclick="checkAnswer('ques4', this)"> <div class="child2 red">C. function() function_name</div></label>
+                <label class="answer"><input type="radio" name="q4" value="D" onclick="checkAnswer('ques4', this)"> <div class="child2 green">D. def function_name()</div></label>
+                <hr>
+                <div class="box3">
+                    <h3>4 of 5 Questions</h3>
+                    <button class="button" onclick="showQuestion('ques3')">Previous</button>
+                    <button class="button" onclick="showQuestion('ques5')">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question" id="ques5" style="display: none;">
+            <div class="box1">
+                <h3>Python Quizlet:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                <div>
+                    <p>Time Left - <span class="timer" id="timer"></span></p>
+                </div>
+            </div>
+            <hr>
+            <div class="box2">
+                <div class="child1">
+                    <h2>5. how can we add an element to a set?</h2>
+                </div>
+                <label class="answer"><input type="radio" name="q5" value="A" onclick="checkAnswer('ques5', this)"> <div class="child2 red">A. append</div></label>
+                <label class="answer"><input type="radio" name="q5" value="B" onclick="checkAnswer('ques5', this)"> <div class="child2 green">B. add</div></label>
+                <label class="answer"><input type="radio" name="q5" value="C" onclick="checkAnswer('ques5', this)"> <div class="child2 red">C. push </div></label>
+                <label class="answer"><input type="radio" name="q5" value="D" onclick="checkAnswer('ques5', this)"> <div class="child2 red">D. pop </div></label>
+                <hr>
+
+                <div class="box3">
+                    <h3>5 of 5 Questions</h3>
+                    <button class="button" onclick="showQuestion('ques4')">Previous</button>
+                    <button class="button" onclick="submitQuiz()">Submit</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
